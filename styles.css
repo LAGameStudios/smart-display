@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.widget {
+    position: absolute;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    width: 25%;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    width: 25%;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    width: 25%;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    width: 25%;
+}
+
+.center-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-controls button,
+.center-controls select {
+    margin: 5px;
+}
