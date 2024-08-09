@@ -9,37 +9,34 @@
 <body>
     <div class="container">
         <div class="widget top-left">
-            <div id="spotify-widget">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/33pt9HBdGlAbRGBHQgsZsU?utm_source=generator" width="100%" height="280" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <div id="todo-widget">
+                <h3>To-Do List</h3>
+                <ul id="todo-items"></ul>
+                <input type="text" id="new-task" placeholder="New task">
+                <button onclick="addTask()">Add Task</button>
             </div>
         </div>
         <div class="widget top-right">
             <div id="link-widget">
                 <p>Links</p>
-                <a href="https://www.youtube.com" target="_blank">- YouTube</a><br>
-                <a href="https://open.spotify.com" target="_blank">- Spotify</a>
+                <ul id="link-items"></ul>
             </div>
         </div>
         <div class="widget bottom-left">
-            <div id="todo-list">
-                <h3>To-Do List</h3>
-                <ul id="todo-items"></ul>
-                <input type="text" id="new-task" placeholder="New task">
-                <button onclick="addTask()">Add</button>
+            <div id="spotify-widget">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/33pt9HBdGlAbRGBHQgsZsU?utm_source=generator" width="100%" height="100%" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
         <div class="widget bottom-right">
-            <div id="digital-clock">
-                <!-- Digital clock will be updated by JS -->
-            </div>
+            <div id="digital-clock"></div>
         </div>
         <div class="center-controls">
             <button onclick="toggleWidgets()">Toggle Widgets</button>
             <select id="center-widget-selector" onchange="changeCenterWidget()">
-                <option value="">Blank</option>
+                <option value="">Select Widget</option>
+                <option value="links">Links</option>
                 <option value="spotify">Spotify</option>
-                <option value="youtube">YouTube</option>
-                <option value="todo">To-Do List</option>
+                <option value="clock">Clock</option>
             </select>
         </div>
     </div>
