@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Display</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="widget top-left">
+            <div id="spotify-widget">
+                <!-- Placeholder for Spotify Widget -->
+                <p>Spotify Widget</p>
+            </div>
+        </div>
+        <div class="widget top-right">
+            <div id="youtube-widget">
+                <!-- Placeholder for YouTube Widget -->
+                <p>YouTube Widget</p>
+            </div>
+        </div>
+        <div class="widget bottom-left">
+            <div id="todo-list">
+                <h3>To-Do List</h3>
+                <ul id="todo-items"></ul>
+                <input type="text" id="new-task" placeholder="New task">
+                <button onclick="addTask()">Add</button>
+            </div>
+        </div>
+        <div class="widget bottom-right">
+            <div id="digital-clock">
+                <!-- Digital clock will be updated by JS -->
+            </div>
+        </div>
+        <div class="center-controls">
+            <button onclick="toggleWidgets()">Toggle Widgets</button>
+            <select id="center-widget-selector" onchange="changeCenterWidget()">
+                <option value="">Blank</option>
+                <option value="spotify">Spotify</option>
+                <option value="youtube">YouTube</option>
+                <option value="todo">To-Do List</option>
+            </select>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
