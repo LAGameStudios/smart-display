@@ -15,6 +15,8 @@ body {
     padding: 10px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 .top-left {
@@ -39,6 +41,23 @@ body {
     bottom: 0;
     right: 0;
     width: 25%;
+}
+
+#spotify-widget iframe {
+    width: 100%; /* Make iframe responsive */
+    height: 100%; /* Adjust height based on container */
+    border-radius: 12px;
+}
+
+#link-widget a {
+    display: block;
+    margin-bottom: 5px;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+#link-widget a:hover {
+    text-decoration: underline;
 }
 
 .center-controls {
